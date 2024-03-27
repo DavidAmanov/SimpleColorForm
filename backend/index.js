@@ -22,16 +22,16 @@ app.get('/api', (req, res)=>{
 })
 
 const pool = new Pool({
-    user: 'postgres',
+    user: 'your_user',
     host: 'localhost',
-    database: 'form_user',
-    password: '1234',
-    port: '5432',
+    database: 'your_database',
+    password: 'your_password',
+    port: 'your_port usual is 5432',
 })
 
 const createTableQuery = `CREATE TABLE UserData (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
+    name VARCHAR(255), 
     age INT,
     color VARCHAR(50)
 )`;
